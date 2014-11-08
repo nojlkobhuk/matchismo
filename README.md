@@ -1,4 +1,4 @@
-minekraft
+Matchismo card game
 =========
 
-Lazy and willness
+Lazy and willness for fun
