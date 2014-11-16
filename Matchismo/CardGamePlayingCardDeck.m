@@ -17,10 +17,14 @@
     
     if (self) {
         for (NSString *suit in [CardGamePlayingCard validSuits]) {
+            NSLog(@"Max rank %lu", (unsigned long)[CardGamePlayingCard maxRank]);
             for (NSUInteger rank = 1; rank <= [CardGamePlayingCard maxRank]; rank++) {
                 CardGamePlayingCard *card = [[CardGamePlayingCard alloc]init];
                 card.rank = rank;
                 card.suit = suit;
+                NSLog(@"%@", card.suit);
+                NSLog(@"%d", card.rank);
+                [self addCard:card];
             }
         }
     }
