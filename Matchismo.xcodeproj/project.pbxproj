@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE40F0181A195DAA00DA1555 /* CardGameMatching.m in Sources */ = {isa = PBXBuildFile; fileRef = CE40F0171A195DAA00DA1555 /* CardGameMatching.m */; };
 		CE968B121A0972F300ECC317 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE968B111A0972F300ECC317 /* Foundation.framework */; };
 		CE968B141A0972F300ECC317 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE968B131A0972F300ECC317 /* CoreGraphics.framework */; };
 		CE968B161A0972F300ECC317 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE968B151A0972F300ECC317 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE40F0161A195DAA00DA1555 /* CardGameMatching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardGameMatching.h; path = ../CardGameMatching.h; sourceTree = "<group>"; };
+		CE40F0171A195DAA00DA1555 /* CardGameMatching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardGameMatching.m; path = ../CardGameMatching.m; sourceTree = "<group>"; };
 		CE968B0E1A0972F300ECC317 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE968B111A0972F300ECC317 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE968B131A0972F300ECC317 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 			children = (
 				CE968B231A0972F300ECC317 /* Main.storyboard */,
 				CE968B261A0972F300ECC317 /* CardGameViewController.h */,
+				CE40F0161A195DAA00DA1555 /* CardGameMatching.h */,
+				CE40F0171A195DAA00DA1555 /* CardGameMatching.m */,
 				CE968B4E1A09A5A900ECC317 /* CardGameCard.h */,
 				CE968B541A09A86900ECC317 /* CardGameDeck.h */,
 				CE968B571A0A491500ECC317 /* CardGamePlayingCard.h */,
@@ -290,6 +295,7 @@
 				CE968B5C1A0DAC0E00ECC317 /* CardGamePlayingCardDeck.m in Sources */,
 				CE968B281A0972F300ECC317 /* CardGameViewController.m in Sources */,
 				CE968B1E1A0972F300ECC317 /* main.m in Sources */,
+				CE40F0181A195DAA00DA1555 /* CardGameMatching.m in Sources */,
 				CE968B501A09A5A900ECC317 /* CardGameCard.m in Sources */,
 				CE968B591A0A491500ECC317 /* CardGamePlayingCard.m in Sources */,
 				CE968B561A09A86900ECC317 /* CardGameDeck.m in Sources */,
@@ -417,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
@@ -430,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
@@ -497,6 +505,7 @@
 				CE968B421A0972F300ECC317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE968B431A0972F300ECC317 /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +514,7 @@
 				CE968B451A0972F300ECC317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
