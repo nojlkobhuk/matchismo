@@ -9,8 +9,8 @@
 #import "CardGameMatching.h"
 
 @interface CardGameMatching()
-@property (nonatomic, readwrite) NSUInteger score;
 @property (nonatomic, strong) NSMutableArray *cards; //of Card
+@property (nonatomic, readwrite) NSInteger score;
 @end
 
 @implementation CardGameMatching
@@ -43,7 +43,7 @@
 
 static const int MISMATCH_PENALTY = 2;
 static const int MATCH_BONUS = 4;
-static const int COST_TO_CHOSE = 1;
+static const int COST_TO_CHOSE = 0;
 
 - (void)chooseCardAtIndex:(NSUInteger)index;
 {
@@ -76,6 +76,16 @@ static const int COST_TO_CHOSE = 1;
 - (Card *)cardAtIndex:(NSUInteger)index;
 {
     return (index<[self.cards count]) ? self.cards[index] : nil;
+}
+
+- (BOOL) restartgame;
+{
+    self.score = 0;
+    for (Card *card in self.cards) {
+        card.chosen = NO;
+        card.matched = NO;
+    }
+    return YES;
 }
 
 @end

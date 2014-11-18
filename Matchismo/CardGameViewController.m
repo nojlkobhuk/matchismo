@@ -14,6 +14,7 @@
 @property (strong, nonatomic) CardGameMatching* game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UIButton *restartButton;
 @end
 
 @implementation CardGameViewController
@@ -28,6 +29,16 @@
 - (CardGameDeck *)createDeck
 {
     return [[CardGamePlayingCardDeck alloc] init];
+}
+
+- (IBAction)touchRestartButton:(UIButton *)sender
+{
+    if ([self.game restartgame]) {
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+        self.game = [[CardGameMatching alloc] initWithCardCount:[self.cardButtons count]
+                                                      usingDeck:[self createDeck]];
+        [self updateUI];
+    }
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender
