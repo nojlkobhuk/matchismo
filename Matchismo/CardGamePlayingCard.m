@@ -28,9 +28,9 @@
         } else if ([otherCard.suit isEqualToString:self.suit]) {
             score = 1;
         }
+    } else if ([otherCards count] == 2) {
+        NSLog(@"matching third card");
     }
-
-
     return score;
 }
 

@@ -19,7 +19,7 @@
 - (NSMutableArray *)cards
 {
     if (!_cards) _cards = [[NSMutableArray alloc]init];
-    NSLog(@"Cards allocated");
+    //NSLog(@"Cards allocated");
     return _cards;
 }
 
