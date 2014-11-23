@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIButton *restartButton;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *switchButton;
 @end
 
 @implementation CardGameViewController
@@ -31,6 +32,30 @@
     return [[CardGamePlayingCardDeck alloc] init];
 }
 
+
+- (instancetype)initWithItems:(NSArray *)items
+{
+    self = [super init]; //super`s designated initializer
+    
+    if (self) {
+    NSLog(@"items %@", items[1]);
+    }
+    return self;
+}
+
+- (IBAction)selectSwitchButton:(UISegmentedControl *)sender
+{
+    int segmentIndex = [sender selectedSegmentIndex];
+    NSLog(@"Switch %@", [self.switchButton titleForSegmentAtIndex:segmentIndex]);
+    if (segmentIndex) {
+        NSLog(@"It`s three card game");
+        self.switchButton = sender;
+    } else {
+        NSLog(@"It`s two card game");
+        self.switchButton = sender;
+    }
+}
+
 - (IBAction)touchRestartButton:(UIButton *)sender
 {
     if ([self.game restartgame]) {
@@ -43,9 +68,16 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender
 {
-    int chosenButtonIndex = [self.cardButtons indexOfObject:sender];
-    [self.game chooseCardAtIndex:chosenButtonIndex];
-    [self updateUI];
+    int segmentIndex = [self.switchButton selectedSegmentIndex];
+    if (segmentIndex) {
+        int chosenButtonIndex = [self.cardButtons indexOfObject:sender];
+        [self.game chooseCardAtIndexfor3Cards:chosenButtonIndex];
+        [self updateUI];
+    } else {
+        int chosenButtonIndex = [self.cardButtons indexOfObject:sender];
+        [self.game chooseCardAtIndexfor2Cards:chosenButtonIndex];
+        [self updateUI];
+    }
 }
 
 - (void)updateUI
