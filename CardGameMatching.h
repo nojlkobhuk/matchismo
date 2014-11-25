@@ -22,5 +22,4 @@
 - (BOOL) restartgame;
 @property (nonatomic, readonly) NSInteger score;
 
-
 @end
