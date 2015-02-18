@@ -12,6 +12,8 @@
 
 - (NSString *)contents
 {
+    NSLog(@"content card suit %@", self.suit);
+    NSLog(@"content card rank %d", self.rank);
     NSArray *rankStrings = [CardGamePlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
@@ -36,11 +38,13 @@
 
 + (NSArray *) validSuits
 {
+    //return nil;
     return @[@"♠️",@"♣️",@"♥️",@"♦️"];
 }
 
 + (NSArray *) rankStrings
 {
+    //return nil;
     return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
 }
 

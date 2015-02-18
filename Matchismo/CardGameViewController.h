@@ -8,10 +8,12 @@
 //  Abstract Class. Must implement methods as described below.
 
 #import <UIKit/UIKit.h>
-//#import "CardGameDeck.h"
+#import "CardGameDeck.h"
+#import "CardGameMatching.h"
 
 @interface CardGameViewController : UIViewController
 
-//- (CardGameDeck *)createDeck; //abstract
+- (CardGameDeck *)createDeck; //abstract
+- (CardGameMatching *)game; //abstract
 
 @end

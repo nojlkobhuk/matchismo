@@ -37,11 +37,12 @@
 - (void)addCard:(Card *)card;
 {
     [self addCard:card atTop: NO];
-    NSLog(@"Card added");
+    NSLog(@"addCard");
 }
 
 - (Card *)drawRandomCard;
 {
+    NSLog(@"drawRandomCard");
     Card *randomCard = nil;
     NSLog(@"Cards count %lu", (unsigned long)self.cards.count);
     if ([self.cards count])

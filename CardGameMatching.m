@@ -28,8 +28,10 @@
     self = [super init]; //super`s designated initializer
     
     if (self) {
+        NSLog(@"Init Deck of cards");
         for (int i = 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
+            NSLog(@"Card %@", card);
             if (card) {
                 [self.cards addObject:card];
             } else {
