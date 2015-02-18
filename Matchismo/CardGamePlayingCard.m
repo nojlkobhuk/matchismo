@@ -12,6 +12,8 @@
 
 - (NSString *)contents
 {
+    NSLog(@"content card suit %@", self.suit);
+    NSLog(@"content card rank %d", self.rank);
     NSArray *rankStrings = [CardGamePlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
@@ -28,19 +30,21 @@
         } else if ([otherCard.suit isEqualToString:self.suit]) {
             score = 1;
         }
+    } else if ([otherCards count] == 2) {
+        NSLog(@"matching third card");
     }
-
-
     return score;
 }
 
 + (NSArray *) validSuits
 {
-    return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
+    //return nil;
+    return @[@"♠️",@"♣️",@"♥️",@"♦️"];
 }
 
 + (NSArray *) rankStrings
 {
+    //return nil;
     return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
 }
 

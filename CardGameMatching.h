@@ -16,10 +16,10 @@
 - (instancetype)initWithCardCount:(NSUInteger)count
                         usingDeck:(CardGameDeck *)deck;
 
-- (void)chooseCardAtIndex:(NSUInteger)index;
+- (void)chooseCardAtIndexfor3Cards:(NSUInteger)index;
+- (void)chooseCardAtIndexfor2Cards:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
 - (BOOL) restartgame;
 @property (nonatomic, readonly) NSInteger score;
-
 
 @end
